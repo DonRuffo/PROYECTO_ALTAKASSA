@@ -52,20 +52,20 @@ const AdministradorSchema = new Schema({
 
 //Encriptación
 
-AdministradorSchema.methods.EncriptarContraAdmin = async (password) =>{
-    const nivelSal = 10
+AdministradorSchema.methods.EncriptarContraAdmin = async function(password){
+    const nivelSal = await bcrypt.genSalt(10)
     const ContraEncriptada = await bcrypt.hash(password, nivelSal)
     return ContraEncriptada
 }
 
 //Comparacion de contraseñas
-AdministradorSchema.methods.CompararContra = async (password) =>{
-    const comparacion = await bcrypt.compare(password, this.password)
+AdministradorSchema.methods.CompararContra = async function (password){
+    const comparacion = bcrypt.compare(password, this.contrasenia)
     return comparacion
 }
 
 //Creacion de token
-AdministradorSchema.methods.GeneradorToken = () =>{
+AdministradorSchema.methods.GeneradorToken = function(){
     const tokenSesion=this.token = Math.random().toString(36).slice(2)
     return tokenSesion
 }
