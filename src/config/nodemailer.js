@@ -32,6 +32,25 @@ const sendMailToAdmin = (userMail, token) => {
   });
 };
 
+const sendMailToAdminRestore = (userMail, token) => {
+
+  let mailOptions = {
+      from: process.env.USER_MAILTRAP,
+      to: userMail,
+      subject: "Recupera tu cuenta",
+      html: `<p>Hola, haz clic <a href="${process.env.URL_BACKEND}recuperar/${encodeURIComponent(token)}">aquí</a> para restablecer tu contraseña.</p>`
+  };
+  
+
+  transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+          console.log(error);
+      } else {
+          console.log('Correo enviado: ' + info.response);
+      }
+  });
+};
+
 export {
-  sendMailToAdmin
+  sendMailToAdmin, sendMailToAdminRestore
 }

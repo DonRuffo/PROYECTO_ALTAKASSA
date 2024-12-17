@@ -72,4 +72,4 @@ AdministradorSchema.methods.GeneradorToken = function(){
 
 
 
-export default model('Adminstrador', AdministradorSchema)
+export default model('Administrador', AdministradorSchema)
