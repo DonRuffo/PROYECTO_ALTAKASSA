@@ -1,5 +1,4 @@
 import Proveedor from "../modules/ModeloProveedor.js";
-import Trabajos from "../modules/ModeloTrabajos.js";
 import { sendMailToAdmin, sendMailToAdminRestore } from "../config/nodemailer.js";
 import generarJWT from "../helpers/crearJWT.js"
 //import { LiaEtsy } from "react-icons/lia";
@@ -56,31 +55,6 @@ const loginProve = async (req, res) => {
     res.status(200).json(nuevoToken)
 }
 
-const RecuperarContraseñaProve = async (req, res) => {
-    const { email } = req.body
-    const ProveBDD = await Proveedor.findOne({ email })
-    if (!ProveBDD) return res.status(404).json({ msg: "La cuenta indicada no existe" })
-    ProveBDD.token = ProveBDD.GenerarToken()
-    sendMailToAdminRestore(ProveBDD.email, ProveBDD.token)
-    await ProveBDD.save()
-    res.status(200).json({ msg: "Se ha enviado un correo para restablecer su contraseña" })
-}
-
-const ComprobarParaRestablecer = async (req, res) => {
-    const { token } = req.params
-    const { contrasenia, email } = req.body
-    if (Object.values(req.body).includes("")) return res.status(404).json({ msg: "Ingrese sus credenciales" })
-    const ProveBDD = await Proveedor.findOne({ email })
-    if (!ProveBDD) return res.status(404).json({ msg: "La cuenta indicada no existe" })
-    if (token !== ProveBDD.token) return res.status(404).json({ msg: "No se restablecer la contraseña" })
-    const Encriptamiento = await ProveBDD.EncriptarContrasenia(contrasenia)
-    ProveBDD.contrasenia = Encriptamiento
-    ProveBDD.token = null
-    ProveBDD.status = true
-    await ProveBDD.save()
-    res.status(200).json({ msg: "Contraseña restablecida exitosamente" })
-}
-
 const ActualizarPerfilProveedor = async (req, res) => {
     const { email } = req.body
     if (Object.values(req.body).includes("")) return res.status(404).json({ msg: "Llenar los campos vacíos" })
@@ -135,7 +109,7 @@ const ConfirmarRecuperarContrasenia = async (req, res) =>{
     res.status(200).json({msg:"Contraseña restablecida con éxito"})
 }
 
-
+/* Para Sprint 4
 const HistorialTrabajos = async (req, res) =>{
     const {proveedor} = req.params
     const TrabajosBDD = await Trabajos.find({proveedor})
@@ -161,20 +135,15 @@ const CancelarTrabajosAgendados = async (req, res) =>{
     await TrabajosBDD.save()
     res.status(200).json({msg:"El trabajo a sido cancelado"})
 }
-
+*/
 
 
 export {
     registroProve,
     confirmarEmail,
     loginProve,
-    RecuperarContraseñaProve,
-    ComprobarParaRestablecer,
     ActualizarPerfilProveedor,
     ActualizarContraseniaProve,
     RecuperarContrasenia,
-    ConfirmarRecuperarContrasenia,
-    HistorialTrabajos,
-    MostrarTrabajosAgendados,
-    CancelarTrabajosAgendados
+    ConfirmarRecuperarContrasenia
 }
