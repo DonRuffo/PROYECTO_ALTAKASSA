@@ -66,7 +66,7 @@ Proveedor.methods.EncriptarContrasenia = async (password) => {
     return nuevaContra
 }
 
-Proveedor.methods.CompararContra = async (password) =>{
+Proveedor.methods.CompararContra = async function(password){
     const Comparacion = await bcrypt.compare(password, this.contrasenia)
     return Comparacion
 }

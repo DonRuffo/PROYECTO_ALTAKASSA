@@ -1,5 +1,5 @@
-import {Schema, model} from 'mongoose';
-
+import mongoose, {Schema, model} from 'mongoose';
+mongoose
 const TrabajosSchema = new Schema({
     cliente:{
         type:mongoose.Schema.Types.ObjectId,
