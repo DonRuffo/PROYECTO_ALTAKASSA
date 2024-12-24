@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cors from 'cors';
 import RouterAdmin from './routers/RouterAdmin.js';
+import routeProveedor from './routers/RouterProveedor.js';
 
 dotenv.config()
 const app = express()
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api',RouterAdmin)
+app.use('/api', routeProveedor)
 
 app.use((req,res)=> res.status(400).send("Endpoint no encontrado"))
 
