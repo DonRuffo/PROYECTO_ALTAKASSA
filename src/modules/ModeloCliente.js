@@ -30,6 +30,10 @@ const ClienteSchema = new Schema({
         unique:true,
         default:null
     },
+    fechaNacimiento:{
+        type:Date,
+        require:true
+    },
     contrasenia:{
         type:String,
         require:true
