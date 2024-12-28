@@ -18,11 +18,9 @@ app.use(morgan('dev'))
 
 app.set('port', process.env.PORT || 3000)
 
-
-
 app.use('/api',RouterAdmin)
 app.use('/api', routeProveedor)
-app.use('/AltaKassa', routerPaginas)
+app.use('/', routerPaginas)
 app.use('/Estilos', routerEstilos)
 app.use('/Imagenes', routerImagenes)
 

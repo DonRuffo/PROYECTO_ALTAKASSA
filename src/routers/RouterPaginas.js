@@ -9,7 +9,7 @@ import { Router } from "express";
 
 const routerPaginas = Router()
 
-routerPaginas.get('/inicio', controladorInicio)
+routerPaginas.get('/', controladorInicio)
 routerPaginas.get('/registro', controladorCrearCuenta)
 routerPaginas.get('/login', controladorLogin)
 routerPaginas.get('/recuperar_contra', controladorRecuperarContra)

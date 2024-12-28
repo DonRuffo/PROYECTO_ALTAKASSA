@@ -35,7 +35,7 @@
 }
 .logoydesc{
     border-radius: 10px;
-    box-shadow: 1px 5px 10px rgb(161, 161, 161);
+    box-shadow: 1px 1px 15px 0px rgb(161, 161, 161);
 }
 .logo-footer{
     display: flex;
