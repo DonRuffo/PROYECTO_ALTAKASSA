@@ -1,0 +1,234 @@
+.contenedor-cards{
+    background-color: black;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+.img-fluid{
+    width: auto;
+    height: auto;
+}
+
+.identidad{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+
+.cards1{
+    box-shadow: 0px 0px 15px 0px  white;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.contenedor-bienvenida{
+    padding-top: 50px;
+}
+.contenedor-beneficios{
+    background-image: url('../IMAGENES/waves-5616845.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logoydesc{
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px rgb(161, 161, 161);
+}
+.logo-footer{
+    display: flex;
+    justify-content: center;
+}
+.cards2{
+    background-color: black;
+    border-right: 1px solid rgb(76, 187, 76);  
+}
+.contenedor-footer{
+    padding-bottom: 5px;
+}
+i{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.fa-facebook:hover{
+    background-color: blue;
+    color: white;
+    box-shadow: 0 0 15px blue;
+}
+.fa-twitter:hover{
+    background-color: skyblue;
+    color: white;
+    box-shadow: 0 0 15px skyblue;
+}
+.fa-instagram:hover{
+    background-color: orange;
+    color: white;
+    box-shadow: 0 0 15px orange;
+}
+.cont{
+    color: white;
+    font-size: small;
+}
+.cont:hover{
+    color:rgb(76, 187, 76);
+}
+.link-light:hover{
+    color: rgb(76, 187, 76);
+}
+.contenedor-identidad{
+    display: flex;
+    justify-content: center;
+}
+.verde1-transparencia{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../IMAGENES/BigTree.svg");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: center;
+    background-size: 170px;
+}
+
+.verde1-seguridad{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../IMAGENES/Seguridad.svg");
+    background-repeat: no-repeat;
+    background-position-x: 97%;
+    background-position-y: 50%;
+    background-size: 185px;
+}
+
+.negra1{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../IMAGENES/Garantia.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 30%;
+    background-size: 550px;
+}
+
+.verde1-comodidad {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../IMAGENES/Calidad.svg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 8%;
+    background-size: 275px;
+}
+
+.verde1-fiabilidad {
+    background-image: url("../IMAGENES/Estrellita.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+    background-size: 100px;
+}
+
+.negra1-usabilidad {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+    url("../IMAGENES/Usabilidad.svg");
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 20%;
+    background-size: 550px;
+}
+
+.contenedor-imgSistema{
+    display: flex;
+    justify-content:center;
+}
+
+.sistema{
+    height: 585px;
+    width: 400px;
+    border-radius: 15px ;
+}
+.acuerdo{
+    height: auto;
+    width: auto;
+    border-radius: 15px;
+}
+.columnaDosImg{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.contenedor-matriz{
+    background-image: url("../IMAGENES/FLOR\ VERDE.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 100px;
+}
+.columna-martillo{
+    background-image: url("../IMAGENES/Ruedita.svg");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position-x: center;
+    background-position-y: 90%;
+}
+
+.contenedor-caracteristicas {
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px green;
+    background-image: url("../IMAGENES/espectroVerde.svg");
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    background-position: center;
+}
+
+.contenedor-dinamica-cliente{
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px purple;
+    background-image: url("../IMAGENES/mallaMorada.svg");
+    background-repeat: no-repeat;
+    background-size: 2980px;
+    background-position: center;
+}
+
+.contenedor-dinamica-trabajador{
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px blue;
+    background-image: url("../IMAGENES/mallaAzul.svg");
+    background-repeat: no-repeat;
+    background-size: 2980px;
+    background-position: center;
+}
+
+.trabajador1{
+    height: 515px;
+    width: 375px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+
+.Botones-contrato{
+    color: rgb(76, 187, 76);
+    font-weight: 700;
+    border: 1px solid rgb(76, 187, 76);
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-left: 25%;
+    margin-bottom: 10%;
+}
+.Botones-contrato:hover{
+    color: black;
+    background-color: rgb(76, 187, 76);
+}
+.comunidad{
+    color: white;
+}
+.comunidad:hover{
+    color: rgb(76, 187, 76);
+}
+.Sugerencias{
+    min-width: 12rem;
+}

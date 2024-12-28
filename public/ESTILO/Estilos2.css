@@ -1,0 +1,42 @@
+.contenedor-bienvenida-acceso{
+    box-shadow: 1px 5px 10px gray;
+    border-radius: 15px;
+}
+.img-constructor{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-family: cursive;
+}
+.Botones-servicios{
+    color: rgb(76, 187, 76);
+    font-weight: 700;
+    border: 1px solid rgb(76, 187, 76);
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-bottom:8px;
+}
+.Botones-servicios:hover{
+    color: black;
+    background-color: rgb(76, 187, 76);
+}
+.EstrellasNegras{
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+.Botones-Detalle{
+    display: flexbox;
+    color: white;
+    padding-left: 165px;
+    padding-top: 262px;
+    padding-bottom: 34px;
+    text-decoration: none;
+}
+.Sugerencias:hover{
+    border: 1px solid rgb(76, 187, 76);
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px rgb(76, 187, 76);
+}
